@@ -12,7 +12,7 @@ import org.springframework.core.io.Resource;
 
 @Configuration
 @ComponentScan("com.allenanker.highlight_spring4.ch2.el")
-@PropertySource("classpath:com/allenanker/highlight_spring4/ch2/el/test.properties")
+@PropertySource("classpath:test.properties")
 public class ElConfig {
     @Value("I love you!")
     private String normal;
@@ -26,7 +26,7 @@ public class ElConfig {
     @Value("#{demoService.another}")
     private String fromAnother;
 
-    @Value("classpath:com/allenanker/highlight_spring4/ch2/el/test.txt")
+    @Value("classpath:test.txt")
     private Resource testFile;
 
     @Value("http://baidu.com")
